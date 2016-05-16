@@ -26,9 +26,9 @@ You should also have a role based configuration that uses MFA in your
 
 ```ini
 [profile default]
-mfa_serial=arn:aws:iam::1234567890:mfa/username
+mfa_serial = arn:aws:iam::1234567890:mfa/username
 output = json
-region=us-east-1
-role_arn=arn:aws:iam::1234567890:role/DesiredRoleName
-source_profile=default
+region = us-east-1
+role_arn = arn:aws:iam::1234567890:role/DesiredRoleName
+source_profile = default
 ```
