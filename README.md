@@ -3,10 +3,11 @@
 This small application assists with set AWS environment variables from the
 credentials returned from a STS `assumeRole` on the command line for subsequent
 applications. So far, it only supports easy evaling in Bash environments as in
-the following example:
+the following if you install this package globally:
 
 ```
-eval `node bin/aws-auth-helper aws-profile-name` && your-command
+npm install -g aws-auth-helper
+eval `aws-auth-helper [aws-profile-name]` && your-command
 ```
 
 ## Requirements
