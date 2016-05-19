@@ -7,7 +7,7 @@ the following if you install this package globally:
 
 ```
 npm install -g aws-auth-helper
-eval `aws-auth-helper [aws-profile-name]` && your-command
+eval "`aws-auth-helper [aws-profile-name]` npm run deploy"
 ```
 
 ## Requirements
