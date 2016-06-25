@@ -12,9 +12,9 @@ eval "`aws-auth-helper [aws-profile-name]` npm run deploy"
 
 The AWS profile is selected by from the first item that matches:
 
-- passing a string after the `aws-auth-helper` command
-- `AWS_PROFILE` environment variable
-- `default` as the default
+1. passing a string after the `aws-auth-helper` command
+1. `AWS_PROFILE` environment variable
+1. `default` as the default
 
 
 ## Requirements
