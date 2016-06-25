@@ -5,10 +5,15 @@
 - nothing so far
 
 
-### 0.1.0 (June 25, 2016)
+### 0.1.1 (June 25, 2016)
 
 - allow `AWS_PROFILE` environment variable to specify aws profile to use
 - output the AWS profile selected to console
+
+
+### 0.1.0 (June 25, 2016)
+
+- botched deploy; ignore
 
 
 ### 0.0.2 (May 18, 2016)
