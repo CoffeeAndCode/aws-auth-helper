@@ -10,6 +10,13 @@ npm install -g aws-auth-helper
 eval "`aws-auth-helper [aws-profile-name]` npm run deploy"
 ```
 
+The AWS profile is selected by from the first item that matches:
+
+- passing a string after the `aws-auth-helper` command
+- `AWS_PROFILE` environment variable
+- `default` as the default
+
+
 ## Requirements
 
 You must have an AWS profile setup in your `~/.aws/credentials` file like

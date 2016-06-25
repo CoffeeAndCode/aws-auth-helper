@@ -50,8 +50,17 @@ function getMFAToken(profile) {
   });
 }
 
-const profile = process.argv.length > 2 ? process.argv[2] : 'default';
-getMFAToken(profile).then(credentials => {
+function getProfileName() {
+  if (process.argv.length > 2) {
+    return process.argv[2];
+  }
+  if (process.env.AWS_PROFILE) {
+    return process.env.AWS_PROFILE;
+  }
+  return 'default';
+}
+
+getMFAToken(getProfileName()).then(credentials => {
   process.stdout.write(`AWS_ACCESS_KEY_ID=${credentials.AccessKeyId} AWS_SECRET_ACCESS_KEY=${credentials.SecretAccessKey} AWS_SESSION_TOKEN=${credentials.SessionToken}`);
 }).catch(error => {
   process.stderr.write(error.message + "\n");
