@@ -16,6 +16,13 @@ The AWS profile is selected by from the first item that matches:
 1. `AWS_PROFILE` environment variable
 1. `default` as the default
 
+If you choose to use `AWS_PROFILE` make sure that you are passing the environment
+variable to the (sub)shell that calls `aws-auth-helper`.
+
+For example:
+
+`export AWS_PROFILE && eval \"`aws-auth-helper` apex deploy\"`
+
 
 ## Requirements
 

@@ -60,6 +60,7 @@ function getProfileName() {
   return 'default';
 }
 
+process.stderr.write(`Using the "${getProfileName()}" aws profile.\n`);
 getMFAToken(getProfileName()).then(credentials => {
   process.stdout.write(`AWS_ACCESS_KEY_ID=${credentials.AccessKeyId} AWS_SECRET_ACCESS_KEY=${credentials.SecretAccessKey} AWS_SESSION_TOKEN=${credentials.SessionToken}`);
 }).catch(error => {
