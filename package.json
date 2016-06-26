@@ -22,7 +22,10 @@
     "bash",
     "mfa",
     "security",
-    "two factor auth"
+    "two factor auth",
+    "2-factor authentication",
+    "apex",
+    "serverless"
   ],
   "author": "Coffee and Code <info@coffeeandcode.com>",
   "license": "ISC",
