@@ -1,11 +1,30 @@
 # AWS Auth Helper
 
-This small application assists with set AWS environment variables from the
-credentials returned from a STS `assumeRole` on the command line for subsequent
-applications. So far, it only supports easy evaling in Bash environments as in
-the following if you install this package globally:
+This small application assists with retrieving temporary AWS environment variables
+from credentials that require 2-factor authentication and assuming an AWS IAM role.
+
+This can be used for requiring a 2-factor authentication code to be entered
+before applications like [Serverless](http://serverless.com/) and
+[Apex](http://apex.run/) deploy your Lambda applications.
+
+The temporary credentials are sent to stdout and can be evaled to use them
+as environment variables in Bash commands.
+
 
 ```
+# As part of your Node project
+npm install aws-auth-helper --save
+
+# package.json
+...
+    "scripts": {
+        "deploy": "eval \"`aws-auth-helper` serverless deploy\""
+    }
+...
+```
+
+```
+# Installed globally
 npm install -g aws-auth-helper
 eval "`aws-auth-helper [aws-profile-name]` npm run deploy"
 ```
@@ -26,7 +45,7 @@ For example:
 
 ## Requirements
 
-You must have an AWS profile setup in your `~/.aws/credentials` file like
+You must have an AWS profile setup in your `~/.aws/credentials` file similar to
 the following:
 
 ```ini
