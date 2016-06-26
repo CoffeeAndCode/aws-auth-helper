@@ -7,7 +7,7 @@
   "directories": {
     "bin": "./bin"
   },
-  "description": "",
+  "description": "This small application assists with retrieving temporary AWS environment variables from credentials that require 2-factor authentication and assuming an AWS IAM role.",
   "main": "bin/aws-auth-helper",
   "repository": {
     "type": "git",
