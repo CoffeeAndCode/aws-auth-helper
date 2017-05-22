@@ -5,6 +5,12 @@
 - nothing so far
 
 
+### 0.2.0 (May 22, 2017)
+
+- provide fallback path to AWS config file since AWS SDK stopped returning filename
+- add Yarn package
+
+
 ### 0.1.1 (June 25, 2016)
 
 - allow `AWS_PROFILE` environment variable to specify aws profile to use
