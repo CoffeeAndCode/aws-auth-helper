@@ -10,8 +10,8 @@ const readline = require('readline');
 
 function assumeRole(profile, token) {
   const creds = new AWS.SharedIniFileCredentials({ profile: profile });
-  const configFile = process.env['AWS_CONFIG_FILE'] || path.join(path.dirname(creds.filename), 'config');
-  const config = ini.parse(fs.readFileSync(configFile, 'utf-8'))[`profile ${profile}`];
+  const configFile = process.env['AWS_CONFIG_FILE'] || path.join(path.dirname(creds.filename || `${process.env.HOME}/.aws/credentials`), 'config');
+  const config = ini.parse(fs.readFileSync(path.resolve(configFile), 'utf-8'))[`profile ${profile}`];
   const sts = new AWS.STS();
 
   return new Promise((resolve, reject) => {
