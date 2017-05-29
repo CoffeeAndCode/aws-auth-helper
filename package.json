@@ -1,21 +1,22 @@
 {
   "name": "aws-auth-helper",
   "version": "0.2.0",
+  "main": "index.js",
+  "bin": {
+    "aws-auth-helper": "./index.js"
+  },
   "engines": {
     "node": ">=4.1.0"
   },
-  "directories": {
-    "bin": "./bin"
-  },
+  "author": "Coffee and Code <info@coffeeandcode.com>",
   "description": "This small application assists with retrieving temporary AWS environment variables from credentials that require 2-factor authentication and assuming an AWS IAM role.",
-  "main": "bin/aws-auth-helper",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/CoffeeAndCode/aws-auth-helper.git"
   },
   "scripts": {
-    "start": "./bin/aws-auth-helper",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "aws",
@@ -27,10 +28,12 @@
     "apex",
     "serverless"
   ],
-  "author": "Coffee and Code <info@coffeeandcode.com>",
-  "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.54.0",
+    "aws-sdk": "^2.58.0",
     "ini": "^1.3.4"
+  },
+  "devDependencies": {
+    "concat-stream": "^1.6.0",
+    "jest": "^20.0.4"
   }
 }
