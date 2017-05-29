@@ -9,8 +9,8 @@ getCredentialsForBash({
   env: process.env,
   stderr: process.stderr,
   stdin: process.stdin,
-  stdout: process.stdout,
+  stdout: process.stdout
 }).catch((error) => {
-  process.stderr.write(error.message + "\n");
+  process.stderr.write(error.message + '\n');
   process.exitCode = 1;
 });

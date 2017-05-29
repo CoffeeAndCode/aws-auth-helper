@@ -1,0 +1,14 @@
+extends: standard
+env:
+  jest: true
+  node: true
+plugins:
+  - standard
+  - promise
+rules:
+  func-names:
+    - error
+    - always
+  semi:
+    - error
+    - always
