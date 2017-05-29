@@ -5,6 +5,13 @@
 - nothing so far
 
 
+### 1.0.0 (May 29, 2017)
+
+- refactor codebase to have tests and provide a bit more user feedback
+- add eslint to project
+- change supported node engine to v4.8.3+
+
+
 ### 0.2.0 (May 22, 2017)
 
 - provide fallback path to AWS config file since AWS SDK stopped returning filename
